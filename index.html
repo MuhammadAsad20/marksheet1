@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+        #form {
+            background-color: black;
+            height: 810px;
+            width: 720px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #form:hover,
+        #table2:hover {
+            box-shadow: 0px 0px 10px 7px rgb(238, 16, 16);
+        }
+
+        .center {
+
+            height: 98vh;
+            width: 99vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #field1 {
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            width: 550px;
+            border: 2px solid rgb(255, 255, 0);
+            text-align: center;
+            line-height: 80px;
+            margin: 50px 0px;
+        }
+
+        legend {
+            font-size: 50px;
+            text-align: center;
+            outline: 2px solid rgb(30, 0, 255);
+        }
+
+        #field2 {
+            color: white;
+            border: 2px solid rgb(255, 255, 0);
+            font-weight: bold;
+            width: 550px;
+            text-align: center;
+            text-align: left;
+            line-height: 80px;
+            margin: 0px 0px 35px;
+        }
+
+        input {
+            border: none;
+            outline: none;
+            height: 20px;
+            border-radius: 10px;
+        }
+
+        input:hover {
+
+            border: 3px solid black;
+            box-shadow: 0px 0px 7px 3px white;
+        }
+
+        .inp {
+            margin-left: 10px;
+
+        }
+
+        .mar {
+            margin-left: 10px;
+        }
+
+        .mu,
+        .mc {
+            margin-left: 30px;
+        }
+
+        .mui {
+            margin-left: 40px;
+        }
+
+        .mm {
+            margin-left: 170px;
+        }
+
+        .mmi {
+            margin-left: 10px;
+        }
+
+        button {
+            width: 150px;
+            height: 60px;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+            border-radius: 50px;
+            border: 3px solid white;
+            background-color: black;
+            color: white;
+        }
+
+        button:hover {
+            border: 3px solid rgba(255, 0, 225, 0.921);
+            background-color: rgb(33, 248, 33);
+            color: rgba(255, 0, 225, 0.921);
+        }
+
+        button:active {
+            border: 3px solid rgb(33, 248, 33);
+            background-color: rgba(255, 0, 225, 0.921);
+            color: rgb(33, 248, 33);
+        }
+
+        #table2 {
+            padding: 10px;
+            line-height: 40px;
+            width: 780px;
+            background-color: black;
+            color: white;
+            display: none;
+            height: 870px;
+        }
+
+        #table1 {
+            padding: 10px;
+            line-height: 40px;
+            width: 780px;
+            text-align: center;
+            background-color: black;
+            color: white;
+            display: none;
+        }
+
+        th {
+            padding: 4px;
+            text-align: center;
+            border: 2px solid blue;
+        }
+
+        .base {
+            border: none;
+            border-bottom: 2px solid;
+            width: 2px;
+        }
+
+        .align {
+            text-align: center;
+            font-size: 12px;
+            font-weight: bold;
+            border: none;
+        }
+
+        .align1 {
+            font-size: 20px;
+            font-weight: bold;
+            border: none;
+            border-bottom: 2px solid;
+        }
+
+        h4 {
+            padding-left: 10px;
+        }
+
+        .yell {
+            border: 2px solid yellow;
+        }
+
+        .bb {
+            border-bottom: none;
+        }
+
+        .bt {
+            border-top: none;
+        }
+
+        .font {
+            font-size: 50px;
+        }
+
+        @media only screen and (max-width: 500px) {
+            body {
+                background-color: lightblue;
+                margin: auto auto;
+                padding: auto;
+            }
+
+            #form {
+                
+                height: 900px;
+                width: 410px;
+            }
+
+            #field1 {
+                height: 350px;
+                width: 320px;
+                text-align: center;
+                line-height: 33px;
+                margin: 5px 0px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            legend {
+                padding: 7px;
+                font-size: 50px;
+            }
+
+            label {
+                font-size: 20px;
+                margin-top: 5px;
+            }
+
+            #field2 {
+                width: 320px;
+                text-align: center;
+                line-height: 35px;
+                margin: 20px 0px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+input{
+    width: 200px;
+    margin-top: 5px;
+}
+br{
+    display: none;
+}
+            .inp {
+                margin-left: 0px;
+
+            }
+
+            .mar {
+                margin-left: 0px;
+            }
+
+            .mu,
+            .mc {
+                margin-left: 2px;
+            }
+
+            .mui {
+                margin-left: 00px;
+            }
+
+            .mm {
+                margin-left: 10px;
+            }
+
+            .mmi {
+                margin-left: 0px;
+            }
+
+            button {
+                width: 120px;
+                height: 50px;
+                margin-top: 15px;
+            }
+
+            #b-btn{
+                margin: 0;
+            }
+
+            #table2 {
+                padding: 10px;
+                line-height: 40px;
+                width: 470px;
+                background-color: black;
+                color: white;
+                display: none;
+                height: 960px;
+            }
+
+            #table1 {
+                padding: 10px;
+                line-height: 40px;
+                width: 780px;
+                text-align: center;
+                background-color: black;
+                color: white;
+                display: none;
+            }
+
+            th {
+                padding: 2px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <div id="form">
+            <fieldset id="field1">
+                <legend>Students Information</legend>
+                <label for="">Name:</label>
+                <input id="name" type="text">
+                <label for="" class="mar">Father Name:</label>
+                <input id="fname" type="text">
+                <br>
+                <label for="">Roll no:</label>
+                <input id="rnum" type="number">
+                <label for="" class="mar">Year:</label>
+                <input id="ynum" type="number">
+            </fieldset>
+            <fieldset id="field2">
+                <legend>Subject Marks</legend>
+                <label for="" class="me mi1">English:</label>
+                <input id="mo1" type="number" class="inp">
+
+                <label for="" class="mu mi1">Urdu:</label>
+                <input id="mo2" type="number" class="inp mui">
+                <br>
+
+                <label for="" class="mp mi1">Physics:</label>
+                <input id="mo3" type="number" class="inp">
+
+                <label for="" class="mc mi1">Chemistry:</label>
+                <input id="mo4" type="number" class="inp">
+                <label for="" class="mm mi1">Maths:</label>
+                <input id="mo5" type="number" class="inp mmi">
+
+            </fieldset>
+            <button onclick="check()">Submit</button>
+        </div>
+        <table border="2" id="table1">
+            <tr>
+                <td>name</td>
+                <td>marks</td>
+                <td>Percentage</td>
+                <td>grade</td>
+                <td>remarks</td>
+            </tr>
+            <tr>
+                <td id="name1"></td>
+                <td id="obtain"></td>
+                <td id="per"></td>
+                <td id="grade"></td>
+                <td id="rem"></td>
+            </tr>
+        </table>
+        <table border="2" id="table2" class="show">
+            <tr>
+                <td class="align">Name:</td>
+                <td class="align1" id="n"></td>
+                <td class="align">Father Name:</td>
+                <td class="align1" id="fn"></td>
+            </tr>
+            <tr>
+                <td class="align">Roll no:</td>
+                <td class="align1" id="rn"></td>
+                <td class="align">Year:</td>
+                <td class="align1" id="y"></td>
+            </tr>
+            <tr>
+                <th>
+                    <h2>Subject</h2>
+                </th>
+                <th>
+                    <h2>Obtained<br> Marks</h2>
+                </th>
+                <th>
+                    <h2>Total<br> Marks</h2>
+                </th>
+                <th class="bb">
+                    <h2>Remarks</h2>
+                </th>
+            </tr>
+            <tr class="yell">
+                <td id="sub1" style="font-weight: bold;">
+                    <h4>English</h4>
+                </td>
+                <td id="m1" style="text-align: center;"></td>
+                <td id="tot1" style="text-align: center;">
+                    <h3>/100</h3>
+                </td>
+                <td id="re" class="bt"
+                    style="text-align: center ; font-family: 'Dancing Script', cursive; font-size: 21px;"></td>
+            </tr>
+            <tr class="yell">
+                <td id="sub2" style="font-weight: bold;">
+                    <h4>Urdu</h4>
+                </td>
+                <td id="m2" style="text-align: center;"></td>
+                <td id="tot2" style="text-align: center;">
+                    <h3>/100</h3>
+                </td>
+                <td id="per2" class="bb" style="text-align: center;">
+                    <h2>Grade</h2>
+                </td>
+            </tr>
+            <tr class="yell">
+                <td id="sub3" style="font-weight: bold;">
+                    <h4>Physics</h4>
+                </td>
+                <td id="m3" style="text-align: center;"></td>
+                <td id="tot3" style="text-align: center;">
+                    <h3>/100</h3>
+                </td>
+                <td id="gr" class="bt font" style="text-align: center;"></td>
+            </tr>
+            <tr class="yell">
+                <td id="sub4" style="font-weight: bold;">
+                    <h4>Chemistry</h4>
+                </td>
+                <td id="m4" style="text-align: center;"></td>
+                <td id="tot4" style="text-align: center;">
+                    <h3>/100</h3>
+                </td>
+                <td id="per4" class="bb" style="text-align: center;">
+                    <h2>Result</h2>
+                </td>
+            </tr>
+            <tr class="yell">
+                <td id="sub5" style="font-weight: bold;">
+                    <h4>Math</h4>
+                </td>
+                <td id="m5" style="text-align: center;"></td>
+                <td id="tot5" style="text-align: center;">
+                    <h3>/100</h3>
+                </td>
+                <td id="res" class="bt font" style="text-align: center;"></td>
+            </tr>
+            <tr>
+                <td class="base" style="text-align: center;">
+                    <h2>Total</h2>
+                </td>
+                <td class="base" id="total1" style="text-align: center;"></td>
+                <td class="base" id="total2" style="text-align: center;">
+                    <h3>/500</h3>
+                </td>
+                <td class="base" id="total3" style="text-align: center;"></td>
+            </tr>
+            <tr>
+                <td colspan="4" style="border: none" ;>
+                    <button style="margin-left: 170px;"
+                        onclick="back()">Back</button></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+
+        function check() {
+            document.getElementById('table2').style.display = "table"
+            document.getElementById('form').style.display = "none"
+            var a = +document.getElementById('mo1').value
+            document.getElementById('m1').innerHTML = a
+            var b = +document.getElementById('mo2').value
+            document.getElementById('m2').innerHTML = b
+            var c = +document.getElementById('mo3').value
+            document.getElementById('m3').innerHTML = c
+            var d = +document.getElementById('mo4').value
+            document.getElementById('m4').innerHTML = d
+            var e = +document.getElementById('mo5').value
+            document.getElementById('m5').innerHTML = e
+            if (a > 100 || b > 100 || c > 100 || d > 100 || e > 100) {
+                alert("Please enter correct value")
+            }
+            else {
+                var obtain = a + b + c + d + e
+                document.getElementById('total1').innerHTML = obtain
+                var total3 = obtain / 500 * 100
+                document.getElementById('total3').innerHTML = total3 + "%"
+            }
+            var per = obtain / 500 * 100
+            document.getElementById('per').innerHTML = per
+            if (a > 40 && b > 40 && c > 40 && d > 40 && e > 40) {
+                var rem = document.getElementById('res').innerHTML = "<span style='color:green'>Pass</span>"
+            }
+            else {
+                document.getElementById('res').innerHTML = "<span style='color:red'>Fail</span>"
+            }
+            if (per >= 80) {
+                document.getElementById('grade').textContent = "A+"
+                document.getElementById('gr').textContent = "A+"
+                document.getElementById('re').textContent = "Exceptional You're a Great Example For Others"
+            }
+            else if (per >= 70) {
+                document.getElementById('grade').textContent = "A"
+                document.getElementById('gr').textContent = "A"
+                document.getElementById('re').textContent = "You're a Shining Star Outstanding Performance"
+            }
+            else if (per >= 60) {
+                document.getElementById('grade').textContent = "B"
+                document.getElementById('gr').textContent = "B"
+                document.getElementById('re').textContent = "Great! You've Made Progress"
+            }
+            else if (per >= 50) {
+                document.getElementById('grade').textContent = "C"
+                document.getElementById('gr').textContent = "C"
+                document.getElementById('re').textContent = "Bravo! Keep Up the Good Work"
+            }
+            else if (per >= 50) {
+                document.getElementById('grade').textContent = "D"
+                document.getElementById('gr').textContent = "D"
+                document.getElementById('re').textContent = "Good! You've Made Progress"
+            }
+            else if (per >= 40) {
+                document.getElementById('grade').textContent = "E"
+                document.getElementById('gr').textContent = "E"
+                document.getElementById('re').textContent = "You Made It Happen You're Getting Better"
+            }
+            else {
+                document.getElementById('grade').textContent = "F"
+                document.getElementById('gr').textContent = "F"
+                document.getElementById('re').textContent = "Way to Go! You Tried Hard"
+            }
+
+            var na = document.getElementById('name').value
+            document.getElementById('name1').innerHTML = na
+            document.getElementById('n').innerHTML = na
+            var fa = document.getElementById('fname').value
+            document.getElementById('fn').innerHTML = fa
+            var rn = document.getElementById('rnum').value
+            document.getElementById('rn').innerHTML = rn
+            var y = document.getElementById('ynum').value
+            document.getElementById('y').innerHTML = y
+
+
+
+        }
+        function back() {
+            document.getElementById('form').style.display = "flex"
+            document.getElementById('table2').style.display = "none"
+
+        }
+
+    </script>
+</body>
+
+</html>
